@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Charts</h1>
+
+<div id="charts">
+  <% @charts.each do |chart| %>
+    <%= render chart %>
+    <p>
+      <%= link_to "Show this chart", chart %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New chart", new_chart_path %>

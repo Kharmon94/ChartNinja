@@ -33,6 +33,9 @@ gem 'activeadmin'
 gem 'cancancan'
 
 gem 'sassc-rails'
+
+gem 'aws-sdk-s3', require: false
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
