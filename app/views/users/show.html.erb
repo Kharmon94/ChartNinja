@@ -1,6 +1,15 @@
-<!-- app/views/users/show.html.erb -->
-
 <h1><%= @user.email %>'s Profile</h1>
-<!-- Add more user details here -->
 
-<%= link_to 'Create Chart', new_chart_path, class: 'btn btn-primary' %>
+<%= link_to 'Add Chart', new_chart_path, class: 'btn btn-primary' %>
+
+<h3>My Charts:</h3>
+<ul>
+  <% @charts.each do |chart| %>
+    <li>
+      <strong>Title:</strong> <%= chart.title %>
+      <!-- Display other chart attributes as needed -->
+      <%= link_to 'View Chart', chart_path(chart) %>
+      <!-- Add link to view or edit the chart -->
+    </li>
+  <% end %>
+</ul>
