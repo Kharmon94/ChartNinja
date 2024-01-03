@@ -34,7 +34,7 @@ class ChartsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update chart" do
-    patch chart_url(@chart), params: { chart: { description: @chart.description, results: @chart.results, title: @chart.title, user_id: @chart.user_id } }
+    patch chart_url(@chart), params: { chart: { description: @chart.description, result: @chart.result, title: @chart.title, user_id: @chart.user_id } }
     assert_redirected_to chart_url(@chart)
   end
 
