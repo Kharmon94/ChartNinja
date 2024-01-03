@@ -4,7 +4,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag @chart.image if @chart.image.attached? %>
+  <%= image_tag(url_for(@chart.image)) if @chart.image.attached? %>
 </p>
 
 <div>
