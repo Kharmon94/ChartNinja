@@ -11,6 +11,7 @@
 # Ignore python virtual environment
 venv/
 
+/.env
 # Ignore Python bytecodes
 *.pyc
 *.pyo
