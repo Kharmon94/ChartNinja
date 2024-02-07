@@ -45,3 +45,5 @@ local_settings.py
 
 # Ignore Node modules
 /node_modules
+
+/config/credentials/production.key
