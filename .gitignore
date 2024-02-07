@@ -10,6 +10,7 @@
 
 # Ignore python virtual environment
 venv/
+myenv/
 
 # Ignore application configuration
 /.env
