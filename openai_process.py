@@ -29,8 +29,13 @@ def analyze_image_with_openai(image_path, api_key, long_prompt):
 
     response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
     result = response.json()
-    content = result['choices'][0]['message']['content']
-    print(content)  # Print only the content part
+    # Using .get() to safely access nested data
+    content = result.get('choices', [{}])[0].get('message', {}).get('content', 'Content not found or Key error')
+
+    print(content)  # Print the content part safely
+    # content = result['choices'][0]['message']['content']
+    # print("Full JSON Response:", result)
+    # print(content)  # Print only the content part
 
 if __name__ == "__main__":
     image_path = sys.argv[1] if len(sys.argv) > 1 else ""
